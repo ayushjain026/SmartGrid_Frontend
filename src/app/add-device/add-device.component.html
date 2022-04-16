@@ -1,0 +1,46 @@
+<div class="col-md-8 offset-md-3">
+    <br><br><br>
+    <h1>Add Devices</h1>
+    <br><br>
+
+    <form>
+
+        <!-- <form (ngSubmit)="onSubmit()"> -->
+        <div class="form-group row">
+            <br><br><br>
+            <label class="col-sm-2 col-form-label" style="font-size: large;">Device Name</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="deviceName" name="deviceName"
+                    [(ngModel)]="device.deviceName">
+                <!-- [(ngModel)] = "smartdevices.devicename" name="devicename"> -->
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label" style="font-size: large;">Status</label>
+            <div class="col-sm-4">
+                <select name="deviceStatus" [(ngModel)]="device.deviceStatus" required>
+                    <option value="On">On</option>
+                    <option value="Off" selected>Off</option>
+                </select>
+                <!-- <label> Status</label>
+        <input type="text" class="form-control" id="deviceStatus"
+             name="deviceStatus" [(ngModel)]="device.deviceStatus"> -->
+                <!-- [(ngModel)] = "smartdevices.status" name="status"> -->
+            </div>
+        </div>
+        <br>
+
+        <button class="btn btn-success" type="submit" (click)="addDevice()" text-align="center"> Submit </button>
+
+
+
+
+        <!-- <div class="container">
+            <router-outlet></router-outlet>
+        
+        
+        </div> -->
+
+    </form>
+</div>

@@ -1,0 +1,41 @@
+<div class="container">
+    <br>
+    <br>
+    <br>
+
+    <h1 style="text-align: center;">Device List</h1>
+    <br>
+    <BR>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">
+                    <h2>ID</h2>
+                </th>
+                <th scope="col">
+                    <h2>DEVICE NAME</h2>
+                </th>
+                <th scope="col">
+                    <h2>STATUS</h2>
+                </th>
+                <th scope="col">
+                    <h2>EDIT</h2>
+                </th>
+                <th scope="col">
+                    <h2>DELETE</h2>
+                </th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dev of device">
+                <th scope="row">{{dev.id}}</th>
+                <td>{{dev.deviceName}}</td>
+                <td>{{dev.deviceStatus}}</td>
+                <td><button class="btn btn-success" (click)="updateDeviceRecords(dev.id)">Update</button></td>
+                <td><button class="btn btn-danger" (click)="deleteDeviceRecords(dev.id)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
